@@ -2,7 +2,7 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
   site: "https://lbyache.github.io",
-  base: "/portfolio",
+  base: "/portfolio-cv",
   output: "static",
   compressHTML: true,
   server: {
