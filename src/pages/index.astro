@@ -1,0 +1,319 @@
+---
+import "../styles/global.css";
+
+const base = import.meta.env.BASE_URL;
+const assetBase = `${base.replace(/\/$/, "")}/`;
+
+const experience = [
+  {
+    period: "2025 - Actualidad",
+    title: "Desarrolladora C# .NET",
+    place: "Axoft Argentina",
+    text: "Desarrollo y mantenimiento de aplicaciones empresariales con C# y .NET, implementación de funcionalidades, corrección de bugs y trabajo en equipo."
+  },
+  {
+    period: "2018 - 2023",
+    title: "Legal Tech Counsel",
+    place: "DHL Express",
+    text: "Asesoramiento legal entre departamentos, elaboración y revisión de contratos comerciales, y desarrollo de automatizaciones de procesos internos con Power Platform."
+  },
+  {
+    period: "2024 - 2025",
+    title: "Web & Mobile Project Collaborator",
+    place: "Freelance",
+    text: "Desarrollo web y colaboración en proyectos mobile junto a otro desarrollador, creando interfaces con SwiftUI, integrando APIs y estructurando flujos de navegación."
+  },
+  {
+    period: "2024 - Actualidad",
+    title: "Docente Desarrollo Web y Base de datos",
+    place: "Escuela de Arte Multimedial Da Vinci",
+    text: "Instrucción en programación web y gestión de bases de datos, fomentando buenas prácticas de código limpio y acompañando la evolución técnica de los estudiantes mediante metodologías ágiles y resolución de problemas."
+  },
+  {
+    period: "2015 - 2017",
+    title: "Auxiliar de investigación",
+    place: "Centro de Bioética, Persona y Familia",
+    text: "Investigar la normativa jurídica aplicada en bioética. Analizar las consecuencias ético-jurídicas del desarrollo de nuevas biotecnologías."
+  },
+  {
+    period: "2023 - 2026",
+    title: "Voluntariado",
+    place: "MeT (Mujeres en tecnologia)",
+    text: "Organización comprometida con impulsar la inclusión y diversidad de género en el ecosistema tecnológico."
+  }
+];
+
+const projects = [
+  {
+    number: "01",
+    title: "LumeFresh Shop",
+    stack: "HTML/CSS/JS vanilla · Web Components · MongoDB · Mercado Pago",
+    text: "Tienda online con componentes web, persistencia de datos y flujo de pagos integrado.",
+    image: `${assetBase}projects/lumefresh.png`,
+    imageAlt: "Vista previa local del proyecto LumeFresh Shop",
+    preview: "https://lumefresh.shop/"
+  },
+  {
+    number: "02",
+    title: "Farmacia Colón",
+    stack: "Laravel · HTML/Tailwind",
+    text: "Sitio web para farmacia desarrollado con Laravel y una interfaz construida con HTML y Tailwind.",
+    image: `${assetBase}projects/farmacia-colon.webp`,
+    imageAlt: "Vista previa local del proyecto Farmacia Colón",
+    code: "https://github.com/yachela/web-fcia-colon"
+  },
+  {
+    number: "03",
+    title: "Himnos de Gloria",
+    stack: "HTML/Bootstrap",
+    text: "Sitio web de himnos construido con HTML y Bootstrap.",
+    image: `${assetBase}projects/himnos.webp`,
+    imageAlt: "Vista previa local del proyecto Himnos de Gloria",
+    preview: "https://himnariodegloria.web.app/"
+  },
+  {
+    number: "04",
+    title: "SintheSky",
+    stack: "Astro/Tailwind CSS",
+    text: "Sitio web desarrollado con Astro y Tailwind CSS.",
+    image: `${assetBase}projects/sinthesky.webp`,
+    imageAlt: "Vista previa local del proyecto SintheSky",
+    code: "https://github.com/LauYache/sinthesky-web",
+    preview: "https://sinthesky.vercel.app/"
+  },
+  {
+    number: "05",
+    title: "diWall",
+    stack: "Swift · iOS",
+    text: "Aplicación para gestionar finanzas personales, registrar gastos, establecer metas de ahorro y visualizar ingresos.",
+    code: "https://github.com/lbyache/diWall"
+  },
+  {
+    number: "06",
+    title: "landmarks",
+    stack: "Swift · SwiftUI · MVVM",
+    text: "Aplicación iOS para marcar lugares favoritos e incluirlos en una lista.",
+    code: "https://github.com/lbyache/landmarks"
+  },
+  {
+    number: "07",
+    title: "Cookcademy",
+    stack: "Swift · SwiftUI · Xcode",
+    text: "Aplicación para guardar y editar recetas favoritas.",
+    code: "https://github.com/lbyache/Cookcademy"
+  },
+  {
+    number: "08",
+    title: "Bulleyes",
+    stack: "Swift · SwiftUI · Xcode · MVVM",
+    text: "Juego para iOS basado en el lanzamiento clásico de dardos.",
+    code: "https://github.com/lbyache/Bulleyes"
+  },
+  {
+    number: "09",
+    title: "calculator",
+    stack: "Swift · SwiftUI · Xcode · MVVM",
+    text: "Calculadora para iOS con operaciones matemáticas básicas.",
+    code: "https://github.com/lbyache/calculator"
+  },
+  {
+    number: "10",
+    title: "Code-History-Quiz",
+    stack: "Swift · SwiftUI · Xcode",
+    text: "Juego de preguntas sobre historia y cultura general de la programación.",
+    code: "https://github.com/lbyache/Code-History-Quiz"
+  },
+  {
+    number: "11",
+    title: "GenKeep",
+    stack: "Swift · SwiftUI · MVVM · Firebase Firestore/Auth",
+    text: "Aplicación móvil para conectar a personas mayores con cuidadores cercanos durante emergencias.",
+    code: "https://github.com/lbyache/gen-keep"
+  }
+];
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Portfolio de Laura Belén Yachelini: backend, iOS, sistemas, docencia y LegalTech." />
+    <meta name="theme-color" content="#fbfaff" />
+    <link rel="icon" type="image/svg+xml" href={`${assetBase}favicon.svg`} />
+    <title>Laura Belén Yachelini — Desarrollo de software</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Ir al contenido principal</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="wordmark" href={base} aria-label="Inicio — Laura Belén Yachelini">
+          <span>LBY</span>
+          <strong>Laura Yachelini</strong>
+        </a>
+        <nav aria-label="Navegación principal">
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#experiencia">Experiencia</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Desarrollo de software · Buenos Aires</p>
+          <h1 id="hero-title">Laura Belén Yachelini</h1>
+          <p class="hero-lede">Desarrollo backend con C#/.NET y profundizo mi transición hacia Swift, SwiftUI e iOS.</p>
+          <div class="hero-pills" aria-label="Enlaces rápidos">
+            <a class="hero-pill" href="mailto:lbyachelini@gmail.com"><span aria-hidden="true">✉</span> Contáctame</a>
+            <a class="hero-pill" href="https://linkedin.com/in/lauyache" target="_blank" rel="noopener noreferrer"><svg class="linkedin-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5.2 8.2H2V22h3.2V8.2ZM3.6 2A1.9 1.9 0 1 0 3.6 5.8 1.9 1.9 0 0 0 3.6 2ZM22 13.9c0-4.1-2.2-6-5.1-6-2.4 0-3.4 1.3-4 2.2V8.2H9.7V22H13v-6.8c0-1.8.3-3.6 2.6-3.6 2.3 0 2.3 2.1 2.3 3.7V22H22v-8.1Z"/></svg> LinkedIn</a>
+            <a class="hero-pill" href={`${assetBase}cv/laura-yachelini-cv.pdf`}><span aria-hidden="true">↓</span> Descargar CV</a>
+          </div>
+          <div class="hero-actions">
+            <a class="button button-primary" href={`${assetBase}cv/laura-yachelini-cv.pdf`}>Descargar CV <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="#experiencia">Ver recorrido <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <aside class="profile-panel" aria-label="Perfil profesional">
+          <img class="profile-photo" src={`${assetBase}foto.webp`} alt="Laura Belén Yachelini, desarrolladora de software y Analista de Sistemas" width="467" height="535" />
+          <p class="profile-kicker">Enfoque técnico</p>
+          <h2>Backend e iOS</h2>
+          <p class="profile-role">Software Developer · Systems Analyst</p>
+          <p class="profile-location">Buenos Aires, Argentina</p>
+          <p class="profile-kicker profile-stack-label">Stack principal</p>
+          <p class="profile-stack">C#/.NET <span>·</span> SwiftUI <span>·</span> iOS</p>
+          <span class="panel-line" aria-hidden="true"></span>
+        </aside>
+      </section>
+
+      <section class="section section-tinted" id="sobre-mi" aria-labelledby="about-title">
+        <div class="shell two-column">
+          <div>
+            <p class="section-label">01 / Sobre mí</p>
+            <h2 id="about-title">Sobre mí</h2>
+          </div>
+          <div class="section-body">
+            <p class="lead">Trabajo con C#/.NET y estoy sumando desarrollo mobile nativo a mi recorrido.</p>
+            <p>También doy clases y estudio Data Science. Me interesan los problemas donde hace falta ordenar información, entender un contexto y convertirlo en una herramienta útil.</p>
+            <div class="credentials" aria-label="Formación actual">
+              <div><strong>Analista</strong><span>de Sistemas</span></div>
+              <div><strong>Data Science</strong><span>en progreso</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell" id="experiencia" aria-labelledby="experience-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">02 / Trayectoria</p>
+            <h2 id="experience-title">Experiencia</h2>
+          </div>
+        </div>
+        <div class="timeline">
+          {experience.map((item, index) => (
+            <article class="timeline-row">
+              <span class="timeline-number">0{index + 1}</span>
+              <p class="timeline-period">{item.period}</p>
+              <h3>{item.title}</h3>
+              <p class="timeline-place">{item.place}</p>
+              <p class="timeline-text">{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="section skills-section" id="habilidades" aria-labelledby="skills-title">
+        <div class="shell skills-layout">
+          <div>
+            <p class="section-label">03 / Herramientas</p>
+            <h2 id="skills-title">Habilidades</h2>
+          </div>
+          <div class="skill-groups">
+            <div><h3>Mobile / iOS</h3><ul class="skill-list"><li>Swift / SwiftUI</li><li>iOS</li></ul></div>
+            <div><h3>Backend / Arquitectura</h3><ul class="skill-list"><li>C# / .NET</li><li>APIs y servicios</li><li>Arquitectura de software</li><li>Bases de datos</li></ul></div>
+            <div><h3>Gestión / Práctica</h3><ul class="skill-list"><li>Análisis de sistemas</li><li>Docencia técnica</li><li>LegalTech</li></ul></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell education-section" id="educacion" aria-labelledby="education-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">04 / Formación</p>
+            <h2 id="education-title">Formación</h2>
+          </div>
+        </div>
+        <div class="education-list">
+          <div class="education-row"><span>01</span><strong>Analista de Sistemas</strong><em>Escuela de Arte Multimedial Da Vinci</em></div>
+          <div class="education-row"><span>02</span><strong>Licenciatura en Ciencia de datos</strong><em>Universidad Pública de Buenos Aires · 2026 - En curso</em></div>
+          <div class="education-row"><span>03</span><strong>Curso Fullstack Node.js</strong><em>Codo a codo · Febrero 2023</em></div>
+          <div class="education-row"><span>04</span><strong>Abogacía</strong><em>Universidad Católica Argentina · 2012- 2017</em></div>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="proyectos" aria-labelledby="projects-title">
+        <div class="shell">
+          <div class="section-heading projects-heading">
+            <div>
+              <p class="section-label">05 / Índice</p>
+              <h2 id="projects-title">Proyectos</h2>
+            </div>
+            <p class="section-intro">Casos de estudio, arquitecturas de referencia y código abierto.</p>
+          </div>
+          <div class="project-index">
+            {projects.map((project) => (
+              <article class="project-row">
+                <span class="project-number">{project.number}</span>
+                <div class="project-heading">
+                  {project.image ? (
+                    <img class="project-image" src={project.image} alt={project.imageAlt} width="1920" height="1440" loading="lazy" />
+                  ) : (
+                    <div class={`project-mockup mockup-${project.number}`} role="img" aria-label={`Composición visual abstracta para ${project.title}`}>
+                      <span class="mockup-window-bar" aria-hidden="true"></span>
+                      <span class="mockup-block mockup-block-one" aria-hidden="true"></span>
+                      <span class="mockup-block mockup-block-two" aria-hidden="true"></span>
+                      <span class="mockup-block mockup-block-three" aria-hidden="true"></span>
+                    </div>
+                  )}
+                  <h3>{project.title}</h3>
+                  <p class="project-stack">{project.stack}</p>
+                </div>
+                <p>{project.text}</p>
+                <div class="project-actions">
+                  {project.code && <a href={project.code} target="_blank" rel="noreferrer">Código <span aria-hidden="true">↗</span></a>}
+                  {project.preview && <a href={project.preview} target="_blank" rel="noreferrer">Preview <span aria-hidden="true">↗</span></a>}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell next-projects" id="proximos-proyectos" aria-labelledby="next-projects-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">06 / Próximo foco</p>
+            <h2 id="next-projects-title">Próximos proyectos iOS</h2>
+          </div>
+        </div>
+        <ol class="next-project-list">
+          <li><strong>Consolidar SwiftUI</strong><span>Seguir practicando navegación, estado y componentes reutilizables.</span></li>
+          <li><strong>Profundizar arquitectura</strong><span>Aplicar MVC y MVVM en proyectos mobile pequeños.</span></li>
+          <li><strong>Conectar servicios</strong><span>Integrar APIs y persistencia desde la experiencia previa en backend.</span></li>
+          <li><strong>Construir y documentar</strong><span>Convertir cada práctica en un proyecto iOS claro y compartible.</span></li>
+        </ol>
+      </section>
+
+      <section class="contact-section" id="contacto" aria-labelledby="contact-title">
+        <div class="shell contact-inner">
+          <p class="section-label">07 / Contacto</p>
+          <h2 id="contact-title">Contacto</h2>
+          <p>Escribime</p>
+          <a class="button button-light" href="mailto:lbyachelini@gmail.com">lbyachelini@gmail.com</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

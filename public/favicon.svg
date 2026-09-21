@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>LBY</title>
+  <rect width="64" height="64" rx="12" fill="#4d376b"/>
+  <path d="M17 16v32h18v-6H24V16h-7Zm23 0v32h7V35h5v-6h-5v-7h7v-6H40Z" fill="#fbfaff"/>
+</svg>
